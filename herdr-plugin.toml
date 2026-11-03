@@ -1,0 +1,15 @@
+id = "herdr-zoom-indicator"
+name = "Zoom Indicator"
+version = "1.0.0"
+min_herdr_version = "0.9.5"
+description = "Show a zoom indicator in the tab bar and expanded sidebar."
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["sh", "-c", "cp \"$HERDR_PLUGIN_ROOT/status.sh\" \"$HERDR_PLUGIN_CONFIG_DIR/status.sh\""]
+
+[[actions]]
+id = "setup"
+title = "Install zoom status command"
+contexts = ["global"]
+command = ["sh", "-c", "cp \"$HERDR_PLUGIN_ROOT/status.sh\" \"$HERDR_PLUGIN_CONFIG_DIR/status.sh\""]
